@@ -1,0 +1,370 @@
+section {
+  padding: 15px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+}
+.card > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+.card > .list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+.card > .list-group:first-child {
+  border-top-width: 0;
+}
+.card > .list-group:last-child {
+  border-bottom-width: 0;
+}
+.card > .card-header + .list-group,
+.card > .list-group + .card-footer {
+  border-top: 0;
+}
+
+.card-body {
+  flex: 1 1 auto;
+}
+
+.card-subtitle {
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+.card-header {
+  margin-bottom: 0;
+}
+.card-header-tabs {
+  border-bottom: 0;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%;
+}
+
+.accordion {
+  overflow-anchor: none;
+}
+.accordion > .card {
+  overflow: hidden;
+}
+.accordion > .card:not(:last-of-type) {
+  border-bottom: 0;
+}
+
+.year {
+  width: 100%;
+  display: block;
+  text-overflow: ellipsis;
+  float: left;
+  color: rgba(255, 255, 255, 0.63);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s all;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.zoom {
+  transition: transform 0.25s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.searchbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 15px;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  background-color: #eee;
+  border-radius: 8px;
+
+  color: #53565a;
+  font-size: 20px;
+  font-weight: 300;
+
+  transition: 0.4s ease-out;
+}
+
+.searchbox:focus {
+  box-shadow: 0px 0px 8px 3px #4484c4;
+}
+
+.con {
+  flex-direction: column;
+  max-width: 100%;
+  padding: 60px;
+  text-align: center;
+}
+
+.hoverContainer {
+  height: 100%;
+  margin: 0px;
+}
+.hoverCon {
+  position: relative;
+  margin: 0px;
+  max-width: 80%;
+}
+.hoverImage {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.hoverBookmark {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  display: inline-block;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+.hoverQueue {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  display: inline-block;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+.hoverWatching {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  display: inline-block;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+.hoverCompleted {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  display: inline-block;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+.hoverContainer:hover .hoverImage {
+  opacity: 1;
+}
+.hoverContainer:hover .hoverBookmark {
+  opacity: 1;
+}
+.hoverContainer:hover .hoverQueue {
+  opacity: 1;
+}
+.hoverContainer:hover .hoverWatching {
+  opacity: 1;
+}
+.hoverContainer:hover .hoverCompleted {
+  opacity: 1;
+}
+.hoverBox .hoverPoster .absol .hoverText {
+  display: inline-grid;
+  height: 100%;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  border-radius: 120px;
+  padding: 5px;
+  /* padding: 10px 30px; */
+}
+
+.hoverBox {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 15px;
+  vertical-align: baseline;
+}
+
+.hoverBox .hoverPoster {
+  padding-bottom: 142%;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.28);
+  vertical-align: baseline;
+}
+
+.hoverBox .hoverPoster .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  background: #2d2f34;
+}
+.hoverBox .hoverPoster .rating {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  background-color: rgba(255, 189, 46, 0.9);
+  border-radius: 100px;
+  display: inline-block;
+  padding: 0 5px;
+  line-height: 25px;
+  color: #000;
+  text-align: center;
+  font-size: 13px;
+}
+.sTitle {
+  position: relative;
+  bottom: 45px;
+  background-color: rgba(255, 189, 46, 0.9);
+  padding: 0 5px;
+  line-height: 25px;
+  color: #000;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hoverBox .hoverPoster .sideCardTitle {
+  position: absolute;
+  bottom: 5px;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #f8f9fa !important;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.hoverBox .hoverPoster .absol {
+  /* position: absolute; */
+  margin-top: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: -0.3px;
+  text-overflow: ellipsis;
+  margin-bottom: 0px;
+  color: #f8f9fa !important;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: -0.3px;
+  text-overflow: ellipsis;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.hr {
+  margin: 5px 0;
+}
+.accordion-group {
+  margin-bottom: 10px;
+  border-radius: 0;
+}
+.accordion-toggle {
+  background: rgb(248, 251, 252);
+}
+
+.accordion-toggle:hover {
+  text-decoration: none;
+}
+
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+
+.selectStyle {
+  width: 46%;
+  float: left;
+  margin-right: 8%;
+}
+
+.accordion-group {
+  margin-bottom: 20px;
+}
+
+.padLR {
+  padding-left: 0px !important;
+  padding-right: 1px !important;
+  padding-bottom: 0px !important;
+  padding-top: 10px !important;
+  min-height: 250px !important;
+}
+
+.marpad {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.red {
+  color: red;
+}
+
+.username {
+  font-size: 1.5rem;
+  padding: 0.25rem 0;
+  color: rgb(255, 255, 255)!important;
+  font-weight: 700;
+  background-color: transparent;
+  border-bottom: 0.25rem solid transparent!important;
+  border-bottom-color: #fff!important;
+  margin-right: 40px;
+}
